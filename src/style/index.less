@@ -13,6 +13,7 @@ body {
 }
 
 #main {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +30,7 @@ body {
         width: 404px;
         height: 724px;
         //background-color: @bg-b-color;        
-        background-image: linear-gradient(0deg, #2b5574,#102f4f, #512a24);
+        background-image: linear-gradient(0deg, #2b5574, #102f4f, #512a24);
         border: 2px solid #000;
 
         #stage-bg {
@@ -137,4 +138,49 @@ body {
         flex-direction: row;
         justify-content: space-between;
     }
+
+    #start-panel {
+        position: absolute;
+        top: calc(50% - 80px);
+        left: calc(50% -60px);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+
+        button {
+            width: 160px;
+            height: 60px;
+            margin: 10px 0px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            cursor:pointer;
+            border: 2px solid #fff;
+            outline: none;
+            box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &#startBtn {
+                background-image: linear-gradient(#ffe958, #fe9400);
+
+                &:hover {
+                    background-image: linear-gradient(#fff073, #feb70f);
+                }
+            }
+
+            &#helpBtn {
+                background-image: linear-gradient(#5df6d8, #00c0fe);
+
+                &:hover {
+                    background-image: linear-gradient(#6cffec, #1cccff);
+                }
+            }
+        }
+    }
+
 }

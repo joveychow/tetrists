@@ -6,6 +6,14 @@ class Game {
     }
     init() {
         this.createBg();
+        let startBtn = <HTMLElement>document.getElementById("startBtn");
+        startBtn.addEventListener("click", this.startHandler);
+
+    }
+    startHandler(evt: MouseEvent) {
+        console.log(evt.currentTarget)
+        let controlBar = <HTMLElement>document.getElementById("start-panel");
+        controlBar.style.display = "none";
         new GameControl();
     }
     //创建格子背景
